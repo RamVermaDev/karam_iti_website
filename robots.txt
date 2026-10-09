@@ -1,0 +1,6 @@
+# Karam Private ITI Robots Exclusion Protocol
+User-agent: *
+Allow: /
+
+# Sitemap Index for Googlebot and other Search Crawlers
+Sitemap: https://lightslategrey-eland-926987.hostingersite.com/sitemap.xml
