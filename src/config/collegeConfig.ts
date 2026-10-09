@@ -61,6 +61,9 @@ export interface CollegeConfig {
     council: string;
     ministry: string;
     approvedSince: string;
+    sidhPortalUrl: string;
+    ncvtMisUrl: string;
+    portalName: string;
   };
   metrics: {
     yearsOfExcellence: string;
@@ -101,7 +104,10 @@ export const collegeConfig: CollegeConfig = {
     board: "National Council for Vocational Training (NCVT)",
     council: "Directorate General of Training (DGT)",
     ministry: "Ministry of Skill Development & Entrepreneurship (MSDE), Govt. of India",
-    approvedSince: "September 2012"
+    approvedSince: "September 2012",
+    sidhPortalUrl: "https://dgt.skillindiadigital.gov.in/",
+    ncvtMisUrl: "https://ncvtmis.gov.in/",
+    portalName: "Skill India Digital Hub (SIDH) / NCVT MIS"
   },
   metrics: {
     yearsOfExcellence: "14+",

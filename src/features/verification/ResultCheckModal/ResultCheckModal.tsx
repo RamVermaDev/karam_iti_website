@@ -128,14 +128,24 @@ export const ResultCheckModal: React.FC<ResultCheckModalProps> = ({ isOpen, onCl
                   </div>
                 </div>
 
-                <div className={styles.portalAction}>
+                <div className={styles.portalAction} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <a
-                    href="https://dgt.skillindiadigital.gov.in/"
+                    href={collegeConfig.affiliation.sidhPortalUrl}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.externalLink}
                   >
-                    <span>View Official Marksheet on DGT Portal</span>
+                    <span>Verify on Skill India Digital Hub (SIDH)</span>
+                    <ExternalLink size={14} />
+                  </a>
+                  <a
+                    href={collegeConfig.affiliation.ncvtMisUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.externalLink}
+                    style={{ background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1' }}
+                  >
+                    <span>Legacy NCVT MIS Trainee Portal</span>
                     <ExternalLink size={14} />
                   </a>
                 </div>
