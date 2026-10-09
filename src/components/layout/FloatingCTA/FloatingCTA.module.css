@@ -1,0 +1,105 @@
+.edgeTab {
+  position: fixed;
+  right: 0;
+  top: 38%;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  z-index: 45;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  box-shadow: -4px 0 16px rgba(220, 38, 38, 0.4);
+  padding: 0.45rem 1.15rem;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.edgeTab:hover {
+  transform: rotate(-90deg) translateY(-4px);
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+}
+
+.edgeTabInner {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sparkleIcon {
+  color: #fef08a;
+  animation: pulse 1.5s infinite;
+}
+
+.whatsappFloat {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 45;
+  width: 54px;
+  height: 54px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsappFloat:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsappIcon {
+  color: #ffffff;
+}
+
+.tooltip {
+  position: absolute;
+  right: 64px;
+  background-color: #0b1b3d;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all 0.2s ease;
+}
+
+.whatsappFloat:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+  .edgeTab {
+    display: none !important;
+  }
+
+  .whatsappFloat {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,125 @@
+.strip {
+  position: relative;
+  margin-top: -2rem;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(11, 27, 61, 0.08);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(11, 27, 61, 0.15);
+  border-color: #cbd5e1;
+}
+
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 0.75rem;
+  background-color: rgba(11, 27, 61, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  color: #0b1b3d;
+}
+
+.iconBoxAmber {
+  width: 46px;
+  height: 46px;
+  border-radius: 0.75rem;
+  background-color: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconAmber {
+  color: #d97706;
+}
+
+.iconBoxGreen {
+  width: 46px;
+  height: 46px;
+  border-radius: 0.75rem;
+  background-color: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconGreen {
+  color: #16a34a;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0b1b3d;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.actionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d97706;
+  margin-top: 0.4rem;
+  transition: gap 0.2s;
+}
+
+.card:hover .actionLink {
+  gap: 0.5rem;
+  color: #b45309;
+}

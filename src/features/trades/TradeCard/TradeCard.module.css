@@ -1,0 +1,207 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px -4px rgba(11, 27, 61, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(11, 27, 61, 0.15);
+  border-color: #cbd5e1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: rgba(11, 27, 61, 0.08);
+  color: #0b1b3d;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.seatsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: #fef3c7;
+  color: #b45309;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid #fde68a;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tradeName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0b1b3d;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.tradeDesc {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  background-color: #f8fafc;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f1f5f9;
+}
+
+@media (min-width: 480px) {
+  .specsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.specItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.specIcon {
+  color: #d97706;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.specLabel {
+  font-size: 0.68rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.specValue {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0b1b3d;
+  margin-top: 0.1rem;
+}
+
+.syllabusBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.syllabusTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wrenchIcon {
+  color: #0b1b3d;
+}
+
+.syllabusList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.syllabusItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.checkIcon {
+  color: #16a34a;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.applyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0b1b3d 0%, #1e3a8a 100%);
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.2);
+  transition: all 0.2s;
+}
+
+.applyBtn:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+}
+
+.detailsBtn {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #64748b;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.detailsBtn:hover {
+  color: #0b1b3d;
+}

@@ -1,0 +1,184 @@
+.topbar {
+  background-color: #060e21;
+  color: #f1f5f9;
+  font-size: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 40;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.35rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+}
+
+.misBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: rgba(217, 119, 6, 0.18);
+  color: #fbbf24;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(217, 119, 6, 0.35);
+}
+
+.shieldIcon {
+  color: #f59e0b;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.affiliation {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.center {
+  flex: 1;
+  overflow: hidden;
+  display: none;
+  margin: 0 1rem;
+}
+
+@media (min-width: 1150px) {
+  .center {
+    display: block;
+  }
+}
+
+.tickerWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.tickerLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  color: #ef4444;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.bellIcon {
+  animation: ring 2s infinite ease;
+}
+
+.tickerScroll {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.tickerText {
+  display: inline-block;
+  color: #cbd5e1;
+  font-weight: 400;
+  padding-left: 100%;
+  animation: marquee 25s linear infinite;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.helplineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #f8fafc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.helplineLink:hover {
+  color: #f59e0b;
+}
+
+.helplineLabel {
+  color: #94a3b8;
+}
+
+.phoneIcon {
+  color: #10b981;
+}
+
+.brochureBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #d97706;
+  color: #ffffff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: background-color 0.2s;
+}
+
+.brochureBtn:hover {
+  background-color: #b45309;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0); }
+  10%, 30% { transform: rotate(-10deg); }
+  20%, 40% { transform: rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+  .affiliation, .divider {
+    display: none;
+  }
+
+  .container {
+    padding: 0.25rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .misBadge {
+    font-size: 0.68rem;
+    padding: 0.12rem 0.4rem;
+  }
+
+  .helplineLabel {
+    display: none;
+  }
+
+  .brochureBtn {
+    display: none;
+  }
+}

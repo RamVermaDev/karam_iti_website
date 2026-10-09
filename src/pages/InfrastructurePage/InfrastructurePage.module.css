@@ -1,0 +1,163 @@
+.infraPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageHero {
+  background: linear-gradient(160deg, #060e21 0%, #0b1b3d 100%);
+  color: #ffffff;
+  padding: 4.5rem 1rem 3.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  max-width: 38rem;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+.contentSection {
+  padding: 5rem 1rem;
+  background-color: #ffffff;
+}
+
+.labsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .labsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.labCard {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.25s;
+}
+
+.labCard:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 15px 35px -5px rgba(11, 27, 61, 0.08);
+}
+
+.labHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  color: #0b1b3d;
+}
+
+.iconAmber {
+  color: #d97706;
+}
+
+.iconGreen {
+  color: #16a34a;
+}
+
+.capacityTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #d97706;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.labTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b1b3d;
+  margin: 0.25rem 0 0;
+  line-height: 1.3;
+}
+
+.labDesc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.featuresList {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.featureTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.featuresList ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.5;
+}

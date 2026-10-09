@@ -1,0 +1,406 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(11, 27, 61, 0.05);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  min-width: fit-content;
+}
+
+.crest {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #0b1b3d 0%, #1e3a8a 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(11, 27, 61, 0.2);
+  border: 1.5px solid #d97706;
+}
+
+.crestIcon {
+  color: #fbbf24;
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b1b3d;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.brandSub {
+  font-size: 0.68rem;
+  color: #64748b;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  padding: 0.5rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navLink:hover {
+  color: #0b1b3d;
+  background-color: #f1f5f9;
+}
+
+.activeLink {
+  color: #0b1b3d !important;
+  font-weight: 700;
+  background-color: rgba(11, 27, 61, 0.06);
+}
+
+.dropdownWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0b1b3d;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dropdownBtn span {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dropdownBtn:hover {
+  background-color: #f1f5f9;
+}
+
+.rotateChevron {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu, .dropdownMenuRight {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.35rem;
+  width: 19rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 35px -5px rgba(11, 27, 61, 0.15);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  animation: fadeIn 0.15s ease-out;
+  z-index: 100;
+}
+
+.dropdownMenuLeft {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.35rem;
+  width: 19rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 35px -5px rgba(11, 27, 61, 0.15);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  animation: fadeIn 0.15s ease-out;
+  z-index: 100;
+}
+
+/* Invisible bridge so mouse never leaves hover zone between button and menu */
+.dropdownMenu::before,
+.dropdownMenuRight::before,
+.dropdownMenuLeft::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  width: 100%;
+}
+
+.dropdownItem:hover {
+  background-color: #f8fafc;
+}
+
+.itemIcon {
+  color: #d97706;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0b1b3d;
+}
+
+.itemSub {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 0.1rem;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.applyBtn {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.applyBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.4);
+}
+
+.mobileToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #0b1b3d;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 1024px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.mobileDrawer {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileLink {
+  padding: 0.65rem 0.75rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.mobileLink:hover {
+  background-color: #f1f5f9;
+}
+
+.mobileActiveLink {
+  background-color: rgba(11, 27, 61, 0.08);
+  color: #0b1b3d;
+}
+
+.mobileGroupHeader {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  padding: 0.5rem 0.75rem 0.15rem;
+}
+
+.mobileSubLink {
+  padding: 0.5rem 0.75rem 0.5rem 1.75rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition: all 0.15s ease;
+}
+
+.mobileSubLink:hover {
+  background-color: #f1f5f9;
+  color: #0b1b3d;
+}
+
+.mobileDivider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+.mobileSecondaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #0b1b3d;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.mobilePrimaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: #d97706;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .crest {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  .brandName {
+    font-size: 1.05rem;
+  }
+
+  .brandSub {
+    font-size: 0.62rem;
+  }
+
+  .applyBtn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .headerActions {
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .applyBtn {
+    display: none;
+  }
+
+  .brandSub {
+    display: none;
+  }
+}
