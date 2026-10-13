@@ -12,8 +12,21 @@ export const Footer: React.FC = () => {
         <div className={styles.grid}>
           {/* Column 1: Institute Identity & Credentials */}
           <div className={styles.colIdentity}>
-            <div className={styles.brandTitle}>{collegeConfig.name}</div>
-            <p className={styles.tagline}>{collegeConfig.tagline}</p>
+            <div className={styles.brandHeader}>
+              <div className={styles.footerLogoBox}>
+                <img 
+                  src="/images/logo.webp" 
+                  alt={`${collegeConfig.name} Logo`} 
+                  className={styles.footerLogoImg}
+                  width={44}
+                  height={44}
+                />
+              </div>
+              <div>
+                <div className={styles.brandTitle}>{collegeConfig.name}</div>
+                <p className={styles.tagline}>{collegeConfig.tagline}</p>
+              </div>
+            </div>
             <div className={styles.accreditationBox}>
               <div className={styles.accreditationItem}>
                 <ShieldCheck size={16} className={styles.iconGold} />
@@ -111,10 +124,16 @@ export const Footer: React.FC = () => {
           <p className={styles.copyright}>
             © {new Date().getFullYear()} {collegeConfig.name}, Gorakhpur. All rights reserved.
           </p>
-          <div className={styles.legalInfo}>
-            <span>DGT Institutional Code: {collegeConfig.misCode}</span>
-            <span>•</span>
-            <span>Management: {collegeConfig.managementName}</span>
+          <div className={styles.credits}>
+            <span>Designed &amp; Developed by </span>
+            <a 
+              href="https://vizve.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.vizveLink}
+            >
+              VIZVE
+            </a>
           </div>
         </div>
       </div>

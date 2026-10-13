@@ -59,7 +59,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResultCheck, onOpenInquiry
         {/* Brand Crest */}
         <Link to="/" className={styles.brand} onClick={closeMenus}>
           <div className={styles.crest}>
-            <GraduationCap size={28} className={styles.crestIcon} />
+            <img 
+              src="/images/logo.webp" 
+              alt={`${collegeConfig.name} Official Logo`} 
+              className={styles.logoImg}
+              width={42}
+              height={42}
+            />
           </div>
           <div className={styles.brandInfo}>
             <span className={styles.brandName}>{collegeConfig.name}</span>
@@ -71,15 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResultCheck, onOpenInquiry
 
         {/* Desktop Navigation Links */}
         <div className={styles.desktopNav}>
-          {/* 1. Home */}
-          <Link
-            to="/"
-            className={`${styles.navLink} ${location.pathname === '/' ? styles.activeLink : ''}`}
-          >
-            Home
-          </Link>
-
-          {/* 2. About Us Dropdown */}
+          {/* 1. About Us Dropdown */}
           <div 
             className={styles.dropdownWrapper}
             onMouseEnter={() => setAboutMenuOpen(true)}

@@ -6,13 +6,8 @@
 .pageHero {
   background: linear-gradient(160deg, #060e21 0%, #0b1b3d 100%);
   color: #ffffff;
-  padding: 4.5rem 1rem 3.5rem;
+  padding: 4.5rem 0 3.5rem;
   text-align: center;
-}
-
-.container {
-  max-width: 80rem;
-  margin: 0 auto;
 }
 
 .badge {
@@ -46,207 +41,61 @@
 }
 
 .contentSection {
-  padding: 5rem 1rem;
+  padding: 4.5rem 0;
   background-color: #ffffff;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3.5rem;
+  gap: 2.5rem;
   align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
   }
 }
 
 .infoCol {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.sectionHeading {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.85rem;
-  font-weight: 800;
-  color: #0b1b3d;
-  margin: 0;
-}
-
-.leadText {
-  font-size: 1rem;
-  color: #64748b;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.cardsList {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 0.5rem;
-}
-
-.contactCard {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  transition: all 0.25s;
-}
-
-.contactCard:hover {
-  transform: translateY(-2px);
-  border-color: #cbd5e1;
-  box-shadow: 0 10px 25px -5px rgba(11, 27, 61, 0.08);
-}
-
-.iconBox {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.75rem;
-  background-color: rgba(11, 27, 61, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.icon {
-  color: #0b1b3d;
-}
-
-.iconBoxGreen {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.75rem;
-  background-color: #dcfce7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.iconGreen {
-  color: #16a34a;
-}
-
-.iconBoxAmber {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.75rem;
-  background-color: #fef3c7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.iconAmber {
-  color: #d97706;
-}
-
-.iconBoxRed {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.75rem;
-  background-color: #fee2e2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.iconRed {
-  color: #dc2626;
-}
-
-.cardTitle {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #0b1b3d;
-  margin: 0;
-}
-
-.cardSub {
-  font-size: 0.82rem;
-  color: #64748b;
-  margin: 0.25rem 0 0.5rem;
-}
-
-.callLink {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #0b1b3d;
-  text-decoration: none;
-}
-
-.callLink:hover {
-  color: #d97706;
-}
-
-.waLink {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #16a34a;
-  text-decoration: none;
-}
-
-.mailLink {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #0b1b3d;
-  text-decoration: none;
-}
-
-.timing {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  color: #64748b;
-  margin-top: 0.4rem;
-}
-
-.mapLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.75rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #dc2626;
-  text-decoration: underline;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .formCol {
-  position: sticky;
-  top: 6rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
-/* Clean Framed Campus Map Section */
+@media (min-width: 1024px) {
+  .formCol {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+/* Framed Campus Map Section */
 .mapSection {
-  padding: 0 1rem 5rem;
+  padding: 0 0 4.5rem;
   background-color: #ffffff;
 }
 
 .mapFrameWrapper {
   width: 100%;
-  height: 480px;
+  height: 440px;
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid #e2e8f0;
   box-shadow: 0 10px 30px -5px rgba(11, 27, 61, 0.08);
   background-color: #f1f5f9;
+  box-sizing: border-box;
 }
 
 .mapIframe {
